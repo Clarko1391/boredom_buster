@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boredom Buster</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+    <section class="main-section">
+        <header class="page-header">
+            <h1>Find an exciting activity to help battle your boredom</h1>
+            <div class="header-flex-wrapper">
+                <div class="input-wrapper">
+                    <label for="random-activity-button">Get a new Random Activity</label>
+                    <button class="activity-button" id="random-activity-button">New Random Activity</button>
+                </div>
+                <div class="input-wrapper">
+                    <div>
+                        <label for="activity_type-select">Get Activity of Type</label>
+                        <select id="activity-type-select"></select>
+                    </div>
+                    <button class="activity-button" id="random-type-button">New Activity By Type</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-display" id="activity-display">
+            <!-- Dynamic content will be populated here -->
+        </div>
+    </section>
+    <template id="activity-card-template">
+        <!-- Attach "activity-key" as a unique prop with the value of the API data's "key" value -->
+        <div class="activity-card" activity-key> 
+            <!-- Display the Activity Description -->
+            <h2 class="activity-title" activity-title></h2>
+            <!-- Display the Accessibility rating out of 10 -->
+            <div class="property">
+                <span class="property-label">Accessibility:</span>
+                <span class="property-value" accessibility-score></span>
+            </div>
+            <!-- Display the price rating out of 10 -->
+            <div class="property">
+                <span class="property-label">Price:</span>
+                <span class="property-value" price-score></span>
+            </div>
+            <div class="property">
+                <span class="property-label">Participants:</span>
+                <span class="property-value" participants></span>
+            </div>
+            <div class="activity-type">
+                <span class="property-label">Type:</span>
+                <span class="property-value type" activity-type></span>
+            </div>
+            <span class="remove-activity" remove-activity>
+                <iconify-icon icon="mdi:close"></iconify-icon>
+            </span>
+        </div>
+    </template>
+</body>
+<script src="script.js" defer></script>
+</html>

@@ -1,0 +1,162 @@
+
+:root{
+    --dark-grey: #333;
+    --light-grey: #ddd;
+    --bold-grey: #444;
+    --darker-grey: #666;
+    --accent-light-grey: #999
+}
+
+/* Reset some default styles and provide a baseline */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a base font size and family */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.header-flex-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-wrapper{
+    width: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.input-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#activity-input {
+    padding: 10px;
+    border: 1px solid var(--light-grey);
+    flex: 1;
+}
+
+.activity-button {
+    margin-top: 8px;
+    padding: 10px 15px;
+    background-color: var(--dark-grey);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.activity-button:hover {
+    background-color: var(--darker-grey);
+    color: whitesmoke;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.content-display {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0px 40px;
+}
+
+.activity-card {
+    border: 1px solid var(--light-grey);
+    padding: 24px;
+    margin: 10px;
+    margin-right: 16px;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 200px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 5px 5px 10px 1px var(--light-grey);
+}
+
+.activity-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-grey);
+}
+
+.property {
+    margin-bottom: 8px;
+}
+
+.property-label {
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+
+.property-value {
+    margin-left: 5px;
+    color: var(--darker-grey);
+}
+
+.activity-type {
+    font-weight: lighter;
+    margin-top: 10px;
+    color: var(--accent-light-grey);
+}
+
+.remove-activity{
+    height: 16px;
+    width: 16px;
+    color: red;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.remove-activity:hover {
+    background-color: var(--darker-grey);
+    color: var(--accent-light-grey);
+    transition: all 0.5s;
+}
+
+
+
+/* Hidden Class */
+.hidden {
+    display: none
+}
