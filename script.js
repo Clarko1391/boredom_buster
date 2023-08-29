@@ -82,7 +82,6 @@ const getRandomActivity = async() =>
 const getRandomActivityByType = async() =>
 {
     const type = activity_type_select.value
-    console.log(activity_type_select, type)
     return await fetch(`${api_route}activity?type=${activity_type_select.value}`)
     .then(
         res => {
